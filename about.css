@@ -1,0 +1,205 @@
+* {
+    transition:all 0.3s ease-in-out;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0px;
+    padding: 0;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  header{
+    width: 100%;
+    height: 500px;
+    background-image: url(images/image3.jpg);
+    background-size: cover;
+ }
+ 
+  .nav{
+    background-color: #f1f1f1;
+  
+  }
+   
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title{
+    display: inline-block;
+    font-size: 26px;
+    color: black;
+    padding: 15px 25px;
+    text-decoration: none;
+  }
+  .nav > .nav-btn, .nav > #nav-check {
+    display: none;
+  }
+
+  .nav > .nav-links {
+    float: right;
+    font-size: 18px;
+    list-style: none;
+    text-align: right;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 30px 25px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .nav > .nav-links > a:hover {
+    color: #4169e1;
+  }
+ 
+  .clear{
+    clear: both;
+  }
+#home{
+    width: 100%;
+    height: 350px;
+}
+
+    #text-wrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+    #text-wrap h1{
+    text-align: center;
+    color: white;
+    width: 100%;
+    font-size: 44px;
+    font-weight: 600;
+    margin: 0;
+    overflow: hidden; 
+    letter-spacing: .10em; 
+    }
+button{
+    background-color: #4169e1;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+}
+button:hover{
+  opacity: 0.8;
+  color: black;
+}
+.clear{
+    clear: both;
+}
+
+#about{
+    display: flex;
+    width: 100%;
+    background-color: #f1f1f1;
+    height: 450px;
+}
+#text{
+    margin: 30px 10px 0px 10px ;
+    padding: 20px;
+
+}
+#about #text h2 {
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+#about #text p {
+    color: black;
+    font-size: 18px;
+    letter-spacing: 0.5;
+    line-height: 1.5;
+}
+#about li{
+    list-style: disc;
+    padding-left: 10px;
+    font-size:18px;
+    line-height: 1.5;
+}
+
+footer{
+    height: 120px;
+    text-align: center;
+    background-color: #161e23;
+    color: white;
+    padding: 15px;
+    margin: auto;
+    font-size: 16px;
+}
+footer p .p1{
+    margin: 0 0 10px;
+}
+footer p a{
+    color: #4169e1;
+    text-decoration: none;
+}
+
+
+@media (max-width:600px) {
+
+  .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 18px;
+    }
+   
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid rgb(14, 13, 13);
+    }
+  .nav > .nav-btn > label > .span{
+    margin-top: 10px;
+  }
+
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: none;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+      background-color: white;
+      color: #4169e1;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+    #about{
+        height: 850px;
+    }
+   
+}
